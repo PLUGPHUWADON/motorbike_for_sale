@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    border: 5px solid #fbc231;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main > h1{
+    position: absolute;
+    top: 40px;
+    color: #fbc231;
+}
+
+main > a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: #000;
+    background-color: #fbc231;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+main > a:hover{
+    color: #fff;
+}
+
+section{
+    margin: 20px;
+    width: 1040px;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+section > div{
+    border-radius: 1px;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.526);
+}
+
+section > div:nth-of-type(2){
+    overflow: hidden;
+}
+
+section > div:nth-of-type(1) img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 0 -100px;
+    border-radius: 20px 20px 0 0;
+}
+
+section > div:nth-of-type(2) img{
+    width: 100%;
+    height: 260px;
+    margin-top: -60px;
+}
+
+section > div:nth-of-type(3) img{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+}
+
+section > div span{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    color: rgb(255, 213, 0);
+    font-size: 30px;
+    border-radius: 20px 20px 0 0;
+    font-weight: bold;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+
+section > div span:hover{
+    opacity: 0.6;
+    mix-blend-mode: darken;
+}
+
+
+
+section > div > div h2{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+section > div > div p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1090px){
+    main{
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1030px){
+    section{
+        margin-top: 80px;
+    }
+}
